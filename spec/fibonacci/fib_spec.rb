@@ -12,7 +12,11 @@ RSpec.describe Fib do
     end
 
     context "when asking for a random number" do
-      it "returns number from the fibonacci sequence at the specified position" do
+      fibonacci = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610,	987, 1597, 2584, 4181]
+
+      xit "returns number from the fibonacci sequence at the specified position" do
+        random_pos = rand(2..fibonacci.size)
+        expect(Fib.num_at_pos(random_pos)).to eql(fibonacci[random_pos])
       end
     end
   end
