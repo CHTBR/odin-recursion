@@ -10,5 +10,10 @@ RSpec.describe Fib do
       xit "returns 1 when asked for number at position 1" do
       end
     end
+
+    context "when asking for a random number" do
+      it "returns number from the fibonacci sequence at the specified position" do
+      end
+    end
   end
 end
