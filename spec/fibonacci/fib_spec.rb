@@ -5,9 +5,11 @@ RSpec.describe Fib do
   describe "#num_at_pos" do
     context "when asking for base cases" do
       xit "returns 0 when asked for number at position 0" do
+        expect(Fib.num_at_pos(0)).to eql(0)
       end
 
       xit "returns 1 when asked for number at position 1" do
+        expect(Fib.num_at_pos(1)).to eql(1)
       end
     end
 
