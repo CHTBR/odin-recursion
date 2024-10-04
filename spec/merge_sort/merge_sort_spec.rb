@@ -17,6 +17,10 @@ RSpec.describe MergeSort do
         [79, 100, 105, 110]
       ]
 
+      it "returns the array if it's just one element" do
+        expect(subject.sort([0])).to eql([0])
+      end
+
       it "returns a sorted array" do
         rand_index = rand(0..2)
         expect(subject.sort(unsorted_arr[rand_index])).to eql(sorted_arr[rand_index])
