@@ -19,7 +19,7 @@ RSpec.describe MergeSort do
 
       it "returns a sorted array" do
         rand_index = rand(0..2)
-        expect(subject.sort(unsorted_arr[rand_index]).to eql(sorted_arr[rand_index]))
+        expect(subject.sort(unsorted_arr[rand_index])).to eql(sorted_arr[rand_index])
       end
     end
   end
