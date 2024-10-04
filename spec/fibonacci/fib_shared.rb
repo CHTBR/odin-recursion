@@ -1,15 +1,14 @@
 require "rspec"
-require_relative "../../fibonacci/fib"
 
-RSpec.describe Fib do
+RSpec.shared_examples "a fibonacci generator" do
   describe "#num_at_pos" do
     context "when asking for base cases" do
       it "returns 0 when asked for number at position 0" do
-        expect(Fib.num_at_pos(0)).to eql(0)
+        expect(generator.num_at_pos(0)).to eql(0)
       end
 
       it "returns 1 when asked for number at position 1" do
-        expect(Fib.num_at_pos(1)).to eql(1)
+        expect(generator.num_at_pos(1)).to eql(1)
       end
     end
 
@@ -18,7 +17,7 @@ RSpec.describe Fib do
 
       it "returns number from the fibonacci sequence at the specified position" do
         random_pos = rand(2..fibonacci.size)
-        expect(Fib.num_at_pos(random_pos)).to eql(fibonacci[random_pos])
+        expect(generator.num_at_pos(random_pos)).to eql(fibonacci[random_pos])
       end
     end
   end
