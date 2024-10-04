@@ -1,4 +1,4 @@
-# Class for storing fibonacci sequence related methods
+# A class for recursively calculating numbers from fibonacci sequence and returning them as an array
 module FibRecursive
   def self.num_at_pos(pos)
     return [0] if pos.zero?
