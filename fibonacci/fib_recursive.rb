@@ -1,5 +1,5 @@
 # Class for storing fibonacci sequence related methods
-class FibRecursive
+module FibRecursive
   def self.num_at_pos(pos)
     return [0] if pos.zero?
     return [0, 1] if pos == 1
